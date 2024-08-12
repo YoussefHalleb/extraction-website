@@ -1,0 +1,22 @@
+<br />
+<div class="container">
+  <h2>voici tous les extraits bancaires :</h2>
+  <table *ngIf="transactions.length > 0" class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Texte</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.text }}</td>
+        <td>
+          <button (click)="deleteData(transaction.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="search-container">
+  <h2>Rechercher une extrait bancaire par ID</h2>
+  <div class="search-form">
+    <input [(ngModel)]="searchId" placeholder="Entrez l'ID" />
+    <button (click)="getDataById()">Rechercher</button>
+  </div>
+
+  <div *ngIf="searchedTransaction" class="result-container">
+    <h3>Résultat de la recherche :</h3>
+    <p><strong>ID:</strong> {{ searchedTransaction.id }}</p>
+    <p><strong>Texte:</strong> {{ searchedTransaction.text }}</p>
+  </div>
+</div>

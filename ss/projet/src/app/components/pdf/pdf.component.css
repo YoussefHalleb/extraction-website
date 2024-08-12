@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px; /* Augmenter la largeur maximale */
+  width: 90%;
+  background-color: #fff;
+  padding: 40px; /* Augmenter le padding pour agrandir le cadre */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Centrer le cadre horizontalement */
+  position: relative; /* Position relative pour placer les boutons absolument */
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.upload-label {
+  cursor: pointer;
+  background-color: #161635;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #2b2b2c;
+}
+
+.upload-input {
+  display: none;
+}
+
+.text-section {
+  margin-top: 20px;
+}
+
+.extracted-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.extracted-text pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 20px; /* Ajuster la position verticale */
+  right: 20px; /* Ajuster la position horizontale pour le coin supérieur droit */
+  background-color: #170a55; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #e74c3c; /* Couleur de fond du bouton au survol */
+}

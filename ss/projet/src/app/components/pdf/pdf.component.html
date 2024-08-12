@@ -1,0 +1,24 @@
+<body>
+  <div class="container">
+    <button class="logout-btn" (click)="logout()">Déconnexion</button>
+    <br />
+    <br />
+    <h1>Sélectionner un extrait bancaire :</h1>
+    <div class="upload-section">
+      <label for="upload" class="upload-label"> Appuyer ici</label>
+      <input type="file" id="upload" accept="image/*" class="upload-input" />
+    </div>
+
+    <div class="text-section">
+      <div *ngIf="extractedTextLines.length > 0" class="extracted-text">
+        <br />
+        <h2>Voici le texte extrait :</h2>
+        <pre>
+            <ul>
+              <li *ngFor="let line of extractedTextLines">{{ line }}</li>
+            </ul>
+          </pre>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,23 @@
+<!-- ocr.component.html -->
+<div>
+  <input type="file" (change)="onFileChange($event)" />
+  <button (click)="uploadFile()">Upload</button>
+</div>
+<table *ngIf="data.length > 0">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opérations</th>
+      <th>Débit</th>
+      <th>Crédit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{ item.date | date : "dd/MM/yyyy" }}</td>
+      <td>{{ item.libelle }}</td>
+      <td>{{ item.debit }}</td>
+      <td>{{ item.credit }}</td>
+    </tr>
+  </tbody>
+</table>

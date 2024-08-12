@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <div class="titlepage">
+              <h2>LOGIN</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 d-flex justify-content-center">
+            <form [formGroup]="loginForm" id="request" class="main_form">
+              <div class="row">
+                <div class="col-md-12">
+                  <input
+                    class="contactus"
+                    placeholder="Email"
+                    formControlName="email"
+                    type="email"
+                    name="Email"
+                  />
+                  <div
+                    *ngIf="
+                      loginForm.get('email')?.invalid &&
+                      (loginForm.get('email')?.dirty ||
+                        loginForm.get('email')?.touched)
+                    "
+                  >
+                    <div *ngIf="loginForm.get('email')?.errors?.['required']">
+                      Email is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input
+                    class="contactus"
+                    placeholder="Password"
+                    formControlName="pwd"
+                    type="password"
+                    name="password"
+                  />
+                  <div
+                    *ngIf="
+                      loginForm.get('pwd')?.invalid &&
+                      (loginForm.get('pwd')?.dirty ||
+                        loginForm.get('pwd')?.touched)
+                    "
+                  >
+                    <div *ngIf="loginForm.get('pwd')?.errors?.['required']">
+                      Password is required
+                    </div>
+                    <div *ngIf="loginForm.get('pwd')?.errors?.['minlength']">
+                      Password must have at least 3 characters
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button
+                    type="button"
+                    (click)="login()"
+                    [disabled]="!loginForm.valid"
+                    class="send_btn"
+                  >
+                    Login
+                  </button>
+                </div>
+                <div class="col-md-12">
+                  <button
+                    type="button"
+                    (click)="createAnAccount()"
+                    class="create_account_btn"
+                  >
+                    Create an Account
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
